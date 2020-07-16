@@ -1,0 +1,146 @@
+lohi@DESKTOP-QOIMHDJ MINGW64 /e/dotnet/DemoGit
+$ git init
+Initialized empty Git repository in E:/dotnet/DemoGit/.git/
+
+lohi@DESKTOP-QOIMHDJ MINGW64 /e/dotnet/DemoGit (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        helloworld.c
+        readme.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+lohi@DESKTOP-QOIMHDJ MINGW64 /e/dotnet/DemoGit (master)
+$ git add .
+
+lohi@DESKTOP-QOIMHDJ MINGW64 /e/dotnet/DemoGit (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   helloworld.c
+        new file:   readme.md
+
+
+lohi@DESKTOP-QOIMHDJ MINGW64 /e/dotnet/DemoGit (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+lohi@DESKTOP-QOIMHDJ MINGW64 /e/dotnet/DemoGit (master)
+$ ls
+helloworld.c  readme.md
+
+lohi@DESKTOP-QOIMHDJ MINGW64 /e/dotnet/DemoGit (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   helloworld.c
+        new file:   readme.md
+
+
+lohi@DESKTOP-QOIMHDJ MINGW64 /e/dotnet/DemoGit (master)
+$ git commit -m"Add helloworld.c and reaadme.md file"
+[master (root-commit) 4980cff] Add helloworld.c and reaadme.md file
+ 2 files changed, 8 insertions(+)
+ create mode 100644 helloworld.c
+ create mode 100644 readme.md
+
+lohi@DESKTOP-QOIMHDJ MINGW64 /e/dotnet/DemoGit (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+lohi@DESKTOP-QOIMHDJ MINGW64 /e/dotnet/DemoGit (master)
+$ git checkout master
+Already on 'master'
+
+lohi@DESKTOP-QOIMHDJ MINGW64 /e/dotnet/DemoGit (master)
+$ ls
+helloworld.c  readme.md
+
+lohi@DESKTOP-QOIMHDJ MINGW64 /e/dotnet/DemoGit (master)
+$ code first.html
+
+lohi@DESKTOP-QOIMHDJ MINGW64 /e/dotnet/DemoGit (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+lohi@DESKTOP-QOIMHDJ MINGW64 /e/dotnet/DemoGit (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+lohi@DESKTOP-QOIMHDJ MINGW64 /e/dotnet/DemoGit (master)
+$ git add .
+
+lohi@DESKTOP-QOIMHDJ MINGW64 /e/dotnet/DemoGit (master)
+$ git commit -m"add first.html"
+[master 0974dd9] add first.html
+ 1 file changed, 8 insertions(+)
+ create mode 100644 first.html
+
+lohi@DESKTOP-QOIMHDJ MINGW64 /e/dotnet/DemoGit (master)
+$ git remote add origin
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+$ git remote add origin <https://github.com/lohitha-anumala/firstdayassignment.g
+it
+bash: https://github.com/lohitha-anumala/firstdayassignment.git: No such file or
+ directory
+
+lohi@DESKTOP-QOIMHDJ MINGW64 /e/dotnet/DemoGit (master)
+$ git push -u origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+lohi@DESKTOP-QOIMHDJ MINGW64 /e/dotnet/DemoGit (master)
+$ ^C
+
+lohi@DESKTOP-QOIMHDJ MINGW64 /e/dotnet/DemoGit (master)
+$
+$ git remote add origin https://github.com/lohitha-anumala/firstdayassignment.git
+
+lohi@DESKTOP-QOIMHDJ MINGW64 /e/dotnet/DemoGit (master)
+$ git push -u origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 742 bytes | 247.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/lohitha-anumala/firstdayassignment.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+lohi@DESKTOP-QOIMHDJ MINGW64 /e/dotnet/DemoGit (master)
+$
